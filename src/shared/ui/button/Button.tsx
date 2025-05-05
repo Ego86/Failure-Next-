@@ -1,5 +1,5 @@
 import { IButton } from "@/shared/interfaces/button";
-import style from "./button.module.scss"
+import style from "./Button.module.scss"
 import { JSX } from "react";
 
 
