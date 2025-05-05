@@ -1,0 +1,1 @@
+export { CreatePost as CreatedPostUI } from "./ui/create-post"

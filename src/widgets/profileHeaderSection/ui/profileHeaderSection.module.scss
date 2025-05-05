@@ -1,0 +1,26 @@
+.wrapper {
+    @apply flex relative p-3 flex-wrap mb-8;
+    
+    img {
+        @apply rounded-lg w-32 h-32;
+    }
+        div {
+            @apply  ml-4 text-wrap w-72;
+            
+        h2 {
+            @apply font-extrabold mb-3 text-xl;
+        }
+
+        h5 {
+            @apply font-normal opacity-70 text-xs;
+        }
+    }
+    button {
+        @apply absolute right-5 w-max h-max;
+        @media (max-width: 400px) {
+            @apply static mt-5;
+            
+        }
+        
+    }
+}

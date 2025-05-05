@@ -1,0 +1,48 @@
+.post {
+    box-shadow: 0px 6px 11px 5px #181818;
+    @apply relative overflow-hidden flex p-6 rounded-lg max-w-max max-h-[650px] min-h-[auto] min-w-[auto];
+
+    >a {
+        @apply flex;
+
+        >section.text {
+
+            @apply mr-4 max-w-[30rem];
+
+            h2 {
+                @apply text-3xl font-semibold;
+            }
+
+        }
+
+        >section.images {
+
+            @apply flex flex-wrap;
+            height: 100%;
+
+            @media(min-width: 500px) {
+
+                img {
+                    @apply max-w-40 max-h-[auto];
+                }
+
+            }
+
+            img {
+                @apply mb-2 mr-2;
+
+            }
+
+        }
+
+    }
+
+    >h2.username {
+        @apply absolute cursor-pointer bottom-2 right-3;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+    }
+}

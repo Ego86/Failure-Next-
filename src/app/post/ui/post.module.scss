@@ -1,0 +1,25 @@
+main.main {
+    @apply flex justify-center items-center h-screen;
+
+    >article {
+        box-shadow: 0px 6px 11px 5px #181818;
+        @apply flex flex-col relative overflow-hidden rounded-lg;
+        @apply w-[800px] h-min max-h-screen mb-8;
+
+        >.imgSection {
+            @apply flex h-56 mb-4 relative;
+            button {
+                @apply absolute bottom-3 right-3;
+            }
+        }
+        >.backButton{
+            width: 100%;
+        }
+        >.textWrapper {
+            @apply p-4;
+            .userDataSection {
+                @apply flex justify-between;
+            }
+        }
+    }
+}

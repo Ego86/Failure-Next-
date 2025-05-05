@@ -1,0 +1,22 @@
+.navList {
+
+    @apply bg-[#181818] hidden px-5 py-3 w-max rounded-lg z-10 absolute top-8;
+    box-shadow: 0 0 10px #222222d4;
+    >ul>li {
+        display: flex;
+        border-bottom: 2px solid white;
+        transition: border .3s linear;
+        
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+
+        &:hover {
+            border-bottom: 2px solid red;
+        }
+    }
+}
+
+.navList.Active {
+    display: block;
+}

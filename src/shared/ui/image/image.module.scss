@@ -1,0 +1,7 @@
+
+.blur{
+    @apply blur-md cursor-pointer;
+    &:hover{
+        @apply blur-sm;
+    }
+}

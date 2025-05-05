@@ -1,0 +1,17 @@
+body{
+    overflow: hidden;
+
+}
+$max-width: 400px;
+
+.overlay {
+@apply z-10 fixed top-0 left-0 w-screen h-screen opacity-60 bg-black ;
+}
+.alertWrapper {
+@apply z-20 fixed max-w-[$max-width] bg-slate-100 text-[#1f1f1f]  opacity-100  w-max p-5;
+bottom: 50%;
+left: 33%;
+@media (max-width: 500px) {
+     left: 10%;
+}
+}
