@@ -3,7 +3,7 @@ import { IListComponents} from "./interface";
 
 export const listComponents:IListComponents[] = [
     { url: "/profile", title: "profile", Icon: User },
-    { url: "/Message", title: "message", Icon: MessageCircleCode },
+    { url: "/message", title: "message", Icon: MessageCircleCode },
     { url: "/frinds", title: "friends", Icon: Users },
     { url: "/auth/login", title: "exit", Icon: LogOut },
   ] as const
