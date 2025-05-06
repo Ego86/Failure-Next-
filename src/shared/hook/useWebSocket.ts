@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 
 const useWebSocket = () => {
   const [messages, setMessages] = useState<string[]>([])
-  const socket = useRef(io("http://localhost:3002"));
+  const socket = useRef(io("https://failure-next-pjy861hrp-failures-projects.vercel.app"));
 
   useEffect(() => {
     const socketInstance = socket.current;
