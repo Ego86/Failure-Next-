@@ -7,6 +7,7 @@ const useWebSocket = () => {
     io("https://failure-server.onrender.com", {
       transports: ["polling", "websocket"],
       upgrade: true,
+      reconnection: true,
     })
   );
   useEffect(() => {
