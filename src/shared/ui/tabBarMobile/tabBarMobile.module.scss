@@ -1,5 +1,5 @@
 .nav {
-    @apply absolute z-10 w-full right-0 bottom-0 p-4 py-3;
+    @apply overflow-hidden absolute z-10 w-full right-0 bottom-0 p-4 py-3;
 
     ul {
         @apply flex justify-between;
