@@ -5,7 +5,7 @@ const PostTitleSection = ({ data }: {data: TypeData}) => (
   <section className={styles.textWrapper}>
     <section className={styles.userDataSection}>
       <h2>{data.username}</h2>
-      <Button>suscribe</Button>
+      <Button variant="containd">suscribe</Button>
     </section>
     <section className={styles.mainSection}>
       <h1>{data.postData.title}</h1>

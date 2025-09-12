@@ -1,9 +1,10 @@
-import { LogOut, MessageCircleCode, User, Users } from "lucide-react";
+import { ListTodo, LogOut, MessageCircleCode, User, Users } from "lucide-react";
 import { IListComponents} from "./interface";
 
 export const listComponents:IListComponents[] = [
     { url: "/profile", title: "profile", Icon: User },
     { url: "/message", title: "message", Icon: MessageCircleCode },
-    { url: "/frinds", title: "friends", Icon: Users },
+    { url: "/friends", title: "friends", Icon: Users },
+    { url: "/todo-list", title: "todo", Icon: ListTodo },
     { url: "/auth/login", title: "exit", Icon: LogOut },
   ] as const

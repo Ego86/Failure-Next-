@@ -12,9 +12,8 @@ const Logo = memo(({ width = 50, height = 50, className, color }: ILogo) => {
   return (
     <ImageComponent
       src="logo.svg"
-      style={{ color, stroke: color,  height: "auto" }}
-
-      className={className}
+      style={{ color,  height: "auto" }}
+      className={`${className} dark:invert`}
       width={width}
       height={height}
     />

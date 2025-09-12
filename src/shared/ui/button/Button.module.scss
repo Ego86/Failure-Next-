@@ -1,14 +1,18 @@
 //  -1px -1px 2px 0px #fff,
 .button {
-    background-color: #242424c9;
-    @apply overflow-hidden outline-none py-2 px-5 rounded-lg;
-    box-shadow: 2px 3px 6px 1px #181818;
-    
-    min-width: max-content;
+    transition: all .3s;
+    box-shadow: 0px 2px 3px 1px #101010;
+    @apply bg-[#151515] overflow-hidden outline-none py-2 px-5 rounded-lg min-w-max;
+    @media (prefers-color-scheme: light) {
+        @apply bg-white;
+        border: 1px solid;
+    }
     &:active {
-        text-shadow: 4px 3px 3px black;
-        box-shadow: inset 2px 3px 6px 1px #181818;
-
+        box-shadow:  inset 0px 2px 5px 3px #101010;
     }
     
+}
+.buttonOutline {
+    @apply overflow-hidden outline-none py-2 px-5 rounded-md min-w-max;
+    border: solid 1px;
 }

@@ -33,7 +33,7 @@ const PostImageSection = ({
           src={data.postData.images[0]}
         />
       )}
-      <Button onClick={() => setOpenSlider(true)}>
+      <Button variant="containd" onClick={() => setOpenSlider(true)}>
         <MoveDiagonal />
       </Button>
     </section>

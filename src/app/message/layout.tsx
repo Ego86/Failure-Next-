@@ -1,13 +1,12 @@
-"use client"
-import useWindowSize from "@/shared/hook/useWindowSize";
-import { redirect } from "next/navigation";
-;
 
-const ChatsLayout = ({ children}) => {
-  const [width] = useWindowSize()
-  if(width <= 1000) {
-    redirect("/chats")
-  }
+// import { redirect } from "next/navigation";
+
+
+const ChatsLayout = ({children}) => {
+
+
+
+
   return <>{children}</>;
 };
 

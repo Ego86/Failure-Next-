@@ -30,7 +30,7 @@ const Message = () => {
         className="w-full flex absolute bottom-0"
       >
         <Input value={value} onChange={(e) => setValue(e.target.value)} />
-        <Button>send</Button>
+        <Button variant="containd">send</Button>
       </form>
     </PlatfomSection>
   );

@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 
-const useWindowSize = () => {
-  // Инициализируем размер окна как [0, 0] для серверного рендеринга
+const useWindowSize = (): number[] => {
   const [windowSize, setWindowSize] = useState([0, 0]);
 
   useEffect(() => {
-    // Проверяем, что код выполняется только в браузере
     if (typeof window !== "undefined") {
-      const resizeHandler = () =>
+      const resizeHandler = () => {
         setWindowSize([window.innerWidth, window.innerHeight]);
+      };
 
       // Устанавливаем начальный размер окна
       setWindowSize([window.innerWidth, window.innerHeight]);
@@ -17,7 +16,6 @@ const useWindowSize = () => {
       return () => window.removeEventListener("resize", resizeHandler);
     }
   }, []);
-
   return windowSize;
 };
 

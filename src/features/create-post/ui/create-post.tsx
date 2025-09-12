@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Input from "@shared/ui/input/input";
 import Form from "@/shared/ui/form/ui/Form";
 import Button from "@shared/ui/button/Button";
@@ -13,8 +13,11 @@ import Link from "next/link";
 
 export const CreatePost = () => {
   const [imgs, setImgs] = useState<File[]>([]);
-  const [width] = useWindowSize();
-
+  const windowSize = useWindowSize();
+  if (!windowSize) {
+    throw Error("Error");
+  }
+  const [width] = useRef(windowSize).current;
   const sendPostAction = async (formData: FormData) => {
     const title = formData.get("title") as string;
     const text = formData.get("text") as string;

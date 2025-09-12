@@ -1,10 +1,10 @@
 import { NextConfig } from "next";
 
 const nextCofing: NextConfig = {
-sassOptions: {
+  sassOptions: {
     implementation: "sass-embedded",
-    
-},
-}
+  },
+  eslint: { dirs: ["./eslint.config.ts"] },
+};
 
-export default nextCofing
+export default nextCofing;

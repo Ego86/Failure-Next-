@@ -1,0 +1,58 @@
+.aside {
+    @apply min-h-80 h-[800px] max-h-[800px] rounded-lg mr-5 w-40 flex flex-col items-center justify-between bg-[#242424c9];
+
+    @media (prefers-color-scheme: light) {
+        @apply bg-white;
+    }
+
+    .navList {
+        @apply flex flex-col py-2;
+
+
+        >button {
+            @apply relative left-3/4;
+            transition: all .3s ease;
+
+            >svg {
+                margin-bottom: 0.25rem;
+            }
+        }
+
+
+
+        >button.btnDefault {
+            @apply static;
+            transform: translateX(0);
+        }
+
+        >ul>li {
+            transition: color .3s ease;
+
+            &:hover {
+                color: #fce3c2;
+            }
+
+            >a {
+                @apply flex justify-start flex-col items-center;
+            }
+        }
+
+        ul>li:not(:last-child) {
+            @apply pb-1;
+        }
+
+        >svg {
+            min-height: 45px;
+            min-width: 45px;
+        }
+    }
+}
+
+.icon {
+    @apply mr-2 min-w-[35px] min-h-[35px];
+}
+
+.navDefault {
+    @apply w-[100px];
+
+}

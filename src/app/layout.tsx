@@ -4,7 +4,7 @@ import "@/app/global.scss";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
 import type { Metadata } from "next";
-import {notoSans} from "@shared/fonts/notoSans"
+import {notoSans} from "@/shared/fonts/fonts"
 import Layout from "./layout/index";
 
 export const metadata: Metadata = {

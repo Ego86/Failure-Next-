@@ -1,0 +1,11 @@
+.main{
+    @apply flex w-screen h-screen pr-5 py-5;
+    @media (max-width: 1800px) {
+        @apply flex-wrap;
+    }
+overflow-y: auto;
+    &>*:not(:last-child) {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}

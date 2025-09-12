@@ -10,6 +10,7 @@ import styles from "../ui/post.module.scss";
 import { Slider } from "@/entities/slider";
 import PostImageSection from "../ui/postSections/postImageSection";
 import PostTitleSection from "../ui/postSections/postTitleSection";
+import Main from "@/shared/ui/main";
 
 export type TypeData = {
   username: string;
@@ -51,16 +52,16 @@ const Post = ({ params }) => {
   }, [data.postData.images, isOpenSlider]);
   
   return (
-    <main className={styles.main}>
+    <Main className={styles.main}>
       {slider}
       <article>
-        <Button className={styles.backButton} onClick={() => navigation.back()}>
+        <Button variant="containd" className={styles.backButton} onClick={() => navigation.back()}>
           <ArrowBigLeft />
         </Button>
         <PostImageSection sizes={{fill: true}} setOpenSlider={setIsOpenSlider} data={data} />
         <PostTitleSection data={data} />
       </article>
-    </main>
+    </Main>
   );
 };
 

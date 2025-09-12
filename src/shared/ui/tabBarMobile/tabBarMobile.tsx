@@ -2,9 +2,9 @@
 import Link from "next/link";
 import { listComponents } from "../constants/navigation/navigation";
 import styles from "./tabBarMobile.module.scss";
-const TabBarMobile = () => {
+const TabBarMobile = ({className}) => {
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${className}`} >
       <ul>
         {listComponents.map(({ title, Icon, url }) => {
           return (

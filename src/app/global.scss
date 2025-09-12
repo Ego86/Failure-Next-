@@ -2,33 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 /* // bg #181818 */
+$background-dark: #000000;
+$background-light: #fff;
+$color-dark: #fff;
+$color-light: #000;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
+  outline: none;
+  box-sizing: border-box;
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #1f1f1f;
-  color: #fff;
+  background: $background-dark;
+  color: $color-dark;
   font-size: 1em;
   overflow-x: hidden;
-  outline: none;
-  box-sizing: border-box;
-}
 
-.wrapper {
-  max-width: 1650px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-  @media (max-width: 1900px) {
-    max-width: 720px;
+  @media (prefers-color-scheme: light) {
+    background: $background-light;
+    color: $color-light;
   }
-}
 
-*::-webkit-scrollbar{
+}
+main{
+width: 100%;
+
+}
+.wrapper {
+ overflow: hidden;
+  display: flex;
+  width: 100%;
+  max-height: 100vh;
+padding: 20px;
+
+
+}
+img {
+  all:revert;
+}
+*::-webkit-scrollbar {
   display: none;
 }

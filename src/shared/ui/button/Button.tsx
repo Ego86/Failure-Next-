@@ -8,14 +8,14 @@ const Button = (
   { 
     isActive = false,
     className,
-
+    variant = "outline",
     children,
     ...props
   }: IButton) => {
 
   const button: JSX.Element = ( 
     <button
-    className={`${style.button} ${className} ${isActive && style.active}`}  
+    className={`${variant === "containd" ? style.button : variant === "outline" ? style.buttonOutline : "py-2 px-5 hover:bg-slate-800 rounded-lg"} ${className} ${isActive && style.active}`}  
     {...props}>
     {children}
     </button>

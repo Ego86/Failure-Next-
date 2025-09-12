@@ -1,10 +1,17 @@
-.input{
-    @apply w-full min-w-10  h-[50px] p-2 rounded-lg bg-[#1f1f1f] text-white outline-none bg-[#242424c9];
-    box-shadow: 2px 3px 6px 1px #181818;
-    // border-bottom: solid 3px #787878;
-    &:focus{
-        text-shadow:  4px 3px 3px black;
-        box-shadow: inset 2px 3px 6px 1px #181818;
+.input {
+    @apply w-full min-w-10 h-[50px] p-2 rounded-lg bg-[#1f1f1f] text-white outline-none bg-[#242424c9];
+    transition: all .3s;
+    box-shadow: 0px 2px 3px 1px #101010;
 
+    // box-shadow: 2px 3px 6px 1px #151515;
+    @media (prefers-color-scheme: light) {
+        @apply bg-white text-black;
+        border: 1px solid;
     }
+
+
+    &:focus {
+        box-shadow: inset 0px 2px 8px 1px #101010;
+    }
+
 }

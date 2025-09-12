@@ -1,24 +1,20 @@
-"use client"
-
-import useWindowSize from "@/shared/hook/useWindowSize";
-import { SideBar } from "@/shared/ui/sidebar";
+import {Aside} from "@/shared/ui/aside";
 import TabBarMobile from "@/shared/ui/tabBarMobile/tabBarMobile";
-import Header from "@/widgets/header";
 import { ReactNode } from "react";
 
 const Layout = ({ children, isAuth }: {isAuth?: boolean, children: ReactNode}) => {
-  const [width] = useWindowSize()
-  return (
+
+ 
+    return (
     <>
-      {isAuth && 
-      <>
-      <Header />
-      {width > 1000 ? <SideBar /> : <TabBarMobile/>}
-      </>
-      }
+      {isAuth && <>
+        <Aside className="md:!flex !hidden" />
+        <TabBarMobile className="md:hidden block" />
+      </> }
       {children}
-    </>
+          </>
   );
+
 };
 
 export default Layout;

@@ -16,7 +16,7 @@ const Chats = () => {
       {userList.map(({ username, avatar, id }) => {
         return (
           <Link href={`/chats/message/${id}`}>
-            <Button className="flex w-full mb-3" key={id}>
+            <Button variant="containd" className="flex w-full mb-3" key={id}>
               <ImageComponent src={avatar} width={50} height={50} />
               <p>{username}</p>
             </Button>

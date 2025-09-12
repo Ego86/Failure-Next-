@@ -1,0 +1,13 @@
+.containerAudio {
+    overflow: visible !important;
+    @apply max-w-max p-5  flex justify-center flex-col;
+
+
+
+    .wrapperControls {
+        @apply flex max-w-96 flex-col;
+    }
+
+
+}
+
