@@ -9,6 +9,7 @@ export const Weather = async () => {
   try {
     const geoResp = await fetch(geoUrl, {
       next: { revalidate: 3600 },
+      cache: "force-cache"
     });
 
     const geoData = await geoResp.json();
@@ -30,7 +31,7 @@ export const Weather = async () => {
     const { temperature, windspeed, weathercode } = weatherData.current_weather;
     const { name } = geoData.results[0];
     return (
-      <PlatfomSection className="flex flex-col items-center p-4 h-[442px] w-[300px]">
+      <PlatfomSection className="flex flex-col !bg-[#6F4C3E] items-center p-4 h-[442px] w-[300px]">
         <h2 className="text-2xl font-bold mb-2">Weather</h2>
         <Cloud className="w-full h-full"/>
         <p className="text-lg">

@@ -69,21 +69,21 @@ export const Audio = ({ className }: { className?: string }) => {
         src="/car.png"
         width={300}
         height={300}
-        className="mb-3 rounded-lg w-[300px] h-auto"
+        className="mb-3 rounded-lg w-[260px] h-auto"
         alt="car"
       />
       <div className="mb-3">
         <h3>
           <strong>MYICE</strong>
         </h3>
-        <cite className="text-sm text-slate-500">NLO22</cite>
+        <cite className="text-sm text-[#6F4C3E] dark:text-slate-500">NLO22</cite>
       </div>
       <div className={styles.wrapperControls}>
         <input
           type="range"
           value={(currentTime / (audioRef.current?.duration || 1)) * 100}
           onChange={handleSeek}
-          className="h-2 mb-3  bg-gray-300 rounded-lg appearance-none cursor-pointer"
+          className="h-2 mb-3  bg-[#6F4C3E]  dark:bg-gray-300 rounded-lg appearance-none cursor-pointer"
         />
         <div className="flex mb-3  justify-center w-full">
           <Button variant="containd">{"<"}</Button>
@@ -98,7 +98,7 @@ export const Audio = ({ className }: { className?: string }) => {
             type="range"
             value={volume * 100}
             onChange={handleVolumeChange}
-            className="flex-1 h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
+            className="flex-1 h-2 bg-[#6F4C3E] dark:bg-gray-300 rounded-lg appearance-none cursor-pointer"
           />
         </div>
       </div>

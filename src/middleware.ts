@@ -8,7 +8,9 @@ const middleware = (req: NextRequest) => {
   if (pathname.startsWith("/message") && auth?.value !== "true") {
     return NextResponse.redirect(new URL("/auth/login", req.url));
   }
-
+if(pathname === "/"){
+  return NextResponse.redirect(new URL("/home", req.url))
+}
   if (pathname === "/auth/login") {
     req.cookies.delete("auth");
   }
@@ -17,7 +19,7 @@ const middleware = (req: NextRequest) => {
 };
 
 export const config = {
-  matcher: ["/message", "/auth/login"],
+  matcher: ["/message", "/auth/login", "/"],
 };
 
 export default middleware;

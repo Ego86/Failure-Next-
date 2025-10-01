@@ -2,7 +2,7 @@
     @apply min-h-80 h-[800px] max-h-[800px] rounded-lg mr-5 w-40 flex flex-col items-center justify-between bg-[#242424c9];
 
     @media (prefers-color-scheme: light) {
-        @apply bg-white;
+        @apply bg-[#ffe2b5];
     }
 
     .navList {
@@ -29,7 +29,7 @@
             transition: color .3s ease;
 
             &:hover {
-                color: #fce3c2;
+                color: #646261;
             }
 
             >a {

@@ -23,14 +23,16 @@ const Aside = ({ className }) => {
   );
 
   return (
-    <aside  className={`${styles.aside} ${className}`}>
-      <Header />
-      <nav className={`${styles.navList} ${styles.navDefault}`}>
-        <ul>{list}</ul>
-      </nav>
-
-      <footer></footer>
-    </aside>
+    <div className="flex items-center">
+      <aside  className={`${styles.aside} ${className}`}>
+        <Header />
+        <nav className={`${styles.navList} ${styles.navDefault}`}>
+          <ul>{list}</ul>
+        </nav>
+      
+        <footer></footer>
+      </aside>
+    </div>
   );
 };
 

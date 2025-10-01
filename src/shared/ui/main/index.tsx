@@ -7,7 +7,7 @@ interface Main extends HTMLProps<HTMLDivElement> {
 
 const Main: FC<Main> = ({children, className}) => {
 return (
-    <main className={`${className}  overflow-hidden h-full px-5 py-4 bg-[#242424c9] rounded-lg`}>{children}</main>
+    <main className={`${className}  overflow-hidden h-full px-5 py-4 dark:bg-[#242424c9]  bg-[#ffeed2] rounded-lg`}>{children}</main>
 )
 }
 

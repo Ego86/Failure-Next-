@@ -3,42 +3,45 @@ import { sanchez } from "@/shared/fonts/fonts";
 import PlatfomSection from "@/shared/ui/platformSection/UI/platfomSection";
 import Image from "next/image";
 import styles from "./home.module.scss";
-// import Link from "next/link";
 import dynamic from "next/dynamic";
 import Main from "@/shared/ui/main";
+
+
+const Favorite = dynamic(() => import("@/entities/favorite"));
 
 const Weather = dynamic(() => import("@/entities/weather"), {
   ssr: true,
 });
-const Audio = dynamic(() => import("@/entities/audio/index"), {
-  ssr: true
-}) 
+const Audio = dynamic(() => import("@/entities/audio"), {
+  ssr: true,
+});
+const lastMessage = `Hello! what u doing? fsdffffffffffffffffffffffffffffffffffffffffffffffffffffffffff`;
 const Home = () => {
   return (
-    <Main style={sanchez.style} className={styles.main}>
-      <div className="flex flex-wrap w-full max-w-max">
-        <PlatfomSection className=" h-[550px] max-h-max">
-          <Image
-          className="isolate w-full h-auto" src="/not-found.png" width={1400} height={200} alt=""></Image>
-        </PlatfomSection>
-        <div className="flex  ">
-          <Post className="mr-5"></Post>
+    <>
+      <Main style={sanchez.style} className={styles.main}>
+        <div className="flex flex-wrap w-full max-w-max">
+          <PlatfomSection className=" h-[530px] max-h-max mb-5">
+            <Image
+              className="isolate w-full h-auto"
+              src="/not-found.png"
+              width={1400}
+              height={200}
+              alt=""
+            ></Image>
+          </PlatfomSection>
+          <div className="flex flex-wrap ">
+            <Post className="mr-5"></Post>
+            <Favorite chat={{ name: "ender", lastMessage }} />
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col">
-          <Audio className="mb-5"></Audio>
-        {/* <PlatfomSection className="h-max w-max mb-5">
-          <Image
-            src="/not-found-mobile.png"
-            className="w-[300px]"
-            width={500}
-            height={500}
-            alt=""
-          ></Image>
-        </PlatfomSection> */}
-        <Weather></Weather>
-      </div>
-    </Main>
+        <div className="flex flex-wrap">
+          <Audio className="mb-5" />
+          <Weather />
+        </div>
+      </Main>
+
+    </>
   );
 };
 

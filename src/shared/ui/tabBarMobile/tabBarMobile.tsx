@@ -11,7 +11,7 @@ const TabBarMobile = ({className}) => {
             <li key={title}>
               <Link href={url}>
                 <Icon />
-                {title}
+                {/* {title} */}
               </Link>
             </li>
           );

@@ -1,13 +1,13 @@
 .post {
     box-shadow: 0px 6px 11px 5px #181818;
-    @apply relative overflow-hidden flex p-6 rounded-lg max-w-max max-h-[650px] min-h-[auto] min-w-[auto];
+    @apply relative overflow-hidden  flex p-6 rounded-lg max-w-max max-h-[650px] min-h-[auto] min-w-[auto];
 
     >a {
-        @apply flex;
+        @apply flex  md:flex-nowrap  flex-wrap;
 
         >article.text {
 
-            @apply mr-4 max-w-[30rem];
+            @apply mr-4 md:mb-0 mb-5  max-w-[30rem];
 
             h2 {
                 @apply text-3xl font-semibold;

@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { use, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { ArrowBigLeft } from "lucide-react";
 
 import { useRouter } from "next/navigation";
