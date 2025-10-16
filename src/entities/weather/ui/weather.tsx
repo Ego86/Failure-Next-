@@ -1,3 +1,5 @@
+"use server"
+
 import PlatfomSection from "@/shared/ui/platformSection/UI/platfomSection";
 import { Cloud } from "lucide-react";
 

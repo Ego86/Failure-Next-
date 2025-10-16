@@ -1,10 +1,14 @@
+"use server"
+
 import Post from "@/entities/post/ui/post";
 import { sanchez } from "@/shared/fonts/fonts";
-import PlatfomSection from "@/shared/ui/platformSection/UI/platfomSection";
+import PlatformSection from "@/shared/ui/platformSection/UI/platfomSection";
 import Image from "next/image";
 import styles from "./home.module.scss";
 import dynamic from "next/dynamic";
 import Main from "@/shared/ui/main";
+import Audio from "@/entities/audio";
+import Link from "next/link";
 
 
 const Favorite = dynamic(() => import("@/entities/favorite"));
@@ -12,16 +16,14 @@ const Favorite = dynamic(() => import("@/entities/favorite"));
 const Weather = dynamic(() => import("@/entities/weather"), {
   ssr: true,
 });
-const Audio = dynamic(() => import("@/entities/audio"), {
-  ssr: true,
-});
+
 const lastMessage = `Hello! what u doing? fsdffffffffffffffffffffffffffffffffffffffffffffffffffffffffff`;
 const Home = () => {
   return (
     <>
       <Main style={sanchez.style} className={styles.main}>
         <div className="flex flex-wrap w-full max-w-max">
-          <PlatfomSection className=" h-[530px] max-h-max mb-5">
+          <PlatformSection className=" h-[530px] max-h-max mb-5">
             <Image
               className="isolate w-full h-auto"
               src="/not-found.png"
@@ -29,7 +31,7 @@ const Home = () => {
               height={200}
               alt=""
             ></Image>
-          </PlatfomSection>
+          </PlatformSection>
           <div className="flex flex-wrap ">
             <Post className="mr-5"></Post>
             <Favorite chat={{ name: "ender", lastMessage }} />
@@ -40,7 +42,6 @@ const Home = () => {
           <Weather />
         </div>
       </Main>
-
     </>
   );
 };

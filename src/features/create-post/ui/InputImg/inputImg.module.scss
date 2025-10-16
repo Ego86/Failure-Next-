@@ -1,6 +1,6 @@
 .inputFile {
     transition: color .3s ease;
-    @apply  relative flex justify-center flex-wrap  ;
+    @apply  relative flex justify-center ;
     &.img{
         @media (max-width: 1000px) {
             @apply  flex-wrap m-0 px-0;

@@ -2,18 +2,18 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
 
-const middleware = (req: NextRequest) => {
+const middleware = async (req: NextRequest) => {
   const pathname = req.nextUrl.pathname;
-  const auth = req.cookies.get("auth")!;
-  if (pathname.startsWith("/message") && auth?.value !== "true") {
-    return NextResponse.redirect(new URL("/auth/login", req.url));
-  }
+  // const auth = req.cookies.get("access_token")!;
+
 if(pathname === "/"){
   return NextResponse.redirect(new URL("/home", req.url))
 }
-  if (pathname === "/auth/login") {
-    req.cookies.delete("auth");
-  }
+  // if (auth) {
+  //   await fetch("https://failure-server.onrender.com/users/login", {
+  //     cache: "force-cache"
+  //   })
+  // }
 
   return NextResponse.next();
 };

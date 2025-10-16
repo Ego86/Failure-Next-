@@ -1,15 +1,11 @@
-.main {
-    @apply  flex justify-center ;
+.section {
+    @apply flex flex-col w-[500px] min-w-[300px] p-5 h-max items-center justify-center ;
 
-    >.wrapper {
-        @apply  max-w-full max-h-56  w-[50%] p-5 ;
-        
+    >.form {
+        @apply mt-5 h-2/4;
         
     }
-}
-.mainMobile{
-    @apply flex flex-col  items-center;
-    .wrapper{
-        @apply  max-w-full max-h-56  w-full p-5 ;
+    @media  (max-width: 1000px) {
+        @apply flex  items-center;
     }
 }

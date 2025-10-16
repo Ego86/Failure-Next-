@@ -5,7 +5,7 @@ const MessageForm = ({ value, handleSendMessage, setValue }) => {
   return (
     <form
       onSubmit={handleSendMessage}
-      className="w-full flex absolute bottom-0"
+      className="w-full flex "
     >
       <Input value={value} onChange={(e) => setValue(e.target.value)} />
       <Button variant="containd">send</Button>

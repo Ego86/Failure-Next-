@@ -1,15 +1,10 @@
-"use client";
-
 import Link from "next/link";
-import { useMemo } from "react";  
 import { listComponents } from "../../constants/navigation/navigation";
 import styles from "./aside.module.scss";
 import Header from "@/widgets/header";
 
 const Aside = ({ className }) => {
-  const list = useMemo(
-    () =>
-      listComponents.map(({ url, title, Icon }, index) => {
+  const list = listComponents.map(({ url, title, Icon }, index) => {
         return (
           <li key={index}>
             <Link href={url}>
@@ -18,9 +13,8 @@ const Aside = ({ className }) => {
             </Link>
           </li>
         );
-      }),
-    []
-  );
+      })
+    
 
   return (
     <div className="flex items-center">
