@@ -3,10 +3,6 @@
 
 
 const ChatsLayout = ({children}) => {
-
-
-
-
   return <>{children}</>;
 };
 

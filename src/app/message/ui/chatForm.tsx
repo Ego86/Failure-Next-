@@ -1,7 +1,12 @@
 import Button from "@/shared/ui/button/Button";
 import Input from "@/shared/ui/input/input";
-
-const MessageForm = ({ value, handleSendMessage, setValue }) => {
+import {  FC, memo } from "react";
+interface IChatForm {
+value: string;
+handleSendMessage: (formData: React.FormEvent<HTMLFormElement>) => void;
+setValue: (arg: string) => void;
+}
+const ChatForm: FC<IChatForm> = memo(({ value, handleSendMessage, setValue }) => {
   return (
     <form
       onSubmit={handleSendMessage}
@@ -11,6 +16,6 @@ const MessageForm = ({ value, handleSendMessage, setValue }) => {
       <Button variant="containd">send</Button>
     </form>
   );
-};
+});
 
-export default MessageForm;
+export default ChatForm;
