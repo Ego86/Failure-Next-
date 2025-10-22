@@ -1,7 +1,7 @@
 "use server" 
 
 import { Metadata } from "next";
-import { data } from "../constant";
+import { data } from "../../../shared/constants/post/constant";
 
 
 export const generateMetadata = async ({}): Promise<Metadata> => {

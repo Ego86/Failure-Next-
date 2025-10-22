@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { memo } from "react";
-import { listComponents } from "../../constants/navigation/navigation";
-import { IPropsModelNavigation } from "../model/interface";
+import { listComponents } from "@shared/constants/navigation/constants";
+import { IPropsModelNavigation } from "@shared/constants/navigation/interface";
 import style from "./modalNavigation.module.scss";
 
 const ModalNav = memo(({ isActive = false }: IPropsModelNavigation) => {

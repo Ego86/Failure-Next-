@@ -1,6 +1,6 @@
 import Button from "@/shared/ui/button/Button";
 import styles from "../post.module.scss";
-import { TypeData } from "../../[id]/page";
+import type { TypeData } from "@shared/constants/post/interface";
 const PostTitleSection = ({ data }: {data: TypeData}) => (
   <section className={styles.textWrapper}>
     <section className={styles.userDataSection}>

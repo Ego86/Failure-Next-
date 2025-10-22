@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useMemo, useState } from "react";
 import { ArrowBigLeft } from "lucide-react";
-import { data } from "../constant";
+import { data } from "@shared/constants/post/constant";
 import { useRouter } from "next/navigation";
 import Button from "@/shared/ui/button/Button";
 import styles from "../ui/post.module.scss";

@@ -5,3 +5,7 @@ export interface IListComponents {
   title: string;
   Icon:  React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>> ;
 }
+
+export interface IPropsModelNavigation {
+  isActive: boolean;
+}

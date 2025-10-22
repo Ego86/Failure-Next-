@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { listComponents } from "../constants/navigation/navigation";
+import { listComponents } from "@shared/constants/navigation/constants";
 import styles from "./tabBarMobile.module.scss";
 const TabBarMobile = ({className}) => {
   return (

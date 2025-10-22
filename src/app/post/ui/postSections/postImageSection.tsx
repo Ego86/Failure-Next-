@@ -2,8 +2,8 @@ import Button from "@/shared/ui/button/Button";
 import Image from "@/shared/ui/image/image";
 import { MoveDiagonal } from "lucide-react";
 import styles from "../post.module.scss";
-import { TypeData } from "../../[id]/page";
 import { Dispatch, SetStateAction } from "react";
+import type { TypeData } from "@shared/constants/post/interface";
 
 const PostImageSection = ({
   data,

@@ -1,5 +1,5 @@
 import { ListTodo, MessageCircleCode, Settings, User, Users } from "lucide-react";
-import { IListComponents} from "./interface";
+import { IListComponents } from "./interface";
 
 export const listComponents:IListComponents[] = [
     { url: "/profile", title: "profile", Icon: User },

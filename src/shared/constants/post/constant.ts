@@ -1,11 +1,5 @@
-export type TypeData = {
-  readonly username: string;
-  readonly postData: {
-    readonly title: string;
-    readonly text: string;
-    readonly images: string[];
-  };
-};
+import { TypeData } from "./interface";
+
 const imgs = [
   "/1625514962_30-kartinkin-com-p-sad-izyashchnikh-slov-anime-anime-krasivo-30.jpg",
   "/1667929102152124336.jpg",
@@ -19,3 +13,5 @@ export const data: TypeData = {
     images: imgs,
   },
 } as const;
+
+
