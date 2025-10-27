@@ -3,15 +3,11 @@ import LinkButton from "@/shared/ui/linkButton/linkbuttom";
 import Main from "@/shared/ui/main";
 import ProfileHeaderSection from "@/widgets/profileHeaderSection/ui/profileHeaderSection";
 
-const Profile = () => {
+const Username = async ({ params }) => {
+  const {username} = await params;
   return (
     <Main>
-      <ProfileHeaderSection isMyProfile={true} />
-      <div className="flex justify-center items-center w-full h-max mb-7">
-        <LinkButton variant="containd" href="/create-post">
-          Create Post
-        </LinkButton>
-      </div>
+      <ProfileHeaderSection isMyProfile={false} username={username}/>
       <div className="flex flex-wrap [&>*]:mr-6 [&>*]:mb-6">
         <Post />
         <Post />
@@ -21,4 +17,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Username;
