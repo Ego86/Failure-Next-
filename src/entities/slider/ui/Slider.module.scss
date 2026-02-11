@@ -1,5 +1,5 @@
 .slider {
-    @apply md:px-8 md:py-8  z-20 top-0 h-full flex justify-between items-center overflow-hidden bg-[#1f1f1fd8] absolute w-screen;
+    @apply w-screen flex justify-between items-center overflow-hidden   ;
 
 
     >button {

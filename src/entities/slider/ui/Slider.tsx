@@ -5,6 +5,7 @@ import { Dispatch, memo, SetStateAction, useCallback, useState } from "react";
 import Image from "@/shared/ui/image/image";
 import Button from "@/shared/ui/button/Button";
 import styles from "./Slider.module.scss";
+import Modal from "@/features/modal";
 
 export const Slider = memo(
   ({
@@ -54,7 +55,7 @@ export const Slider = memo(
     }, [countImg, imgs.length]);
 
     return (
-      <div className={styles.slider}>
+      <Modal className={styles.slider}>
         <Button
           onClick={() => setOpenSlider((prev) => !prev)}
           className={styles.closeBtn}
@@ -68,7 +69,7 @@ export const Slider = memo(
         <Button onClick={handleClickRight}>
           <ChevronRight />
         </Button>
-      </div>
+      </Modal>
     );
   }
 );

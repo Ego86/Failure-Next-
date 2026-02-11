@@ -9,6 +9,8 @@ import dynamic from "next/dynamic";
 import Main from "@/shared/ui/main";
 import Audio from "@/entities/audio";
 import Link from "next/link";
+import RoundVideo from "@/widgets/roundVideo";
+import SimpleRoundVideo from "@/widgets/roundVideo";
 
 
 const Favorite = dynamic(() => import("@/entities/favorite"));
@@ -41,6 +43,7 @@ const Home = () => {
           <Audio className="mb-5" />
           <Weather />
         </div>
+        {/* <SimpleRoundVideo></SimpleRoundVideo> */}
       </Main>
     </>
   );

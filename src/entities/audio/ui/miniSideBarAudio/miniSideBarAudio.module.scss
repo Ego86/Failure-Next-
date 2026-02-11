@@ -1,0 +1,45 @@
+.container {
+    @apply flex pl-2 py-3 bg-[#6F4C3E] overflow-hidden w-28 h-52 rounded-2xl z-10 absolute bottom-5 left-5;
+
+    .wrapper {
+        @apply w-full flex flex-col justify-between ;
+    }
+}
+
+.openSideBar {
+    @apply w-80 animate-[sizeOpen];
+    transition: all .4s ease-in;
+}
+
+.closeSideBar {
+    @apply w-28 animate-[sizeClose];
+    transition: all .4s ease-in;
+}
+
+@keyframes sizeOpen {
+    0% {
+        @apply w-28;
+    }
+
+    50% {
+        @apply w-56;
+    }
+
+    100% {
+        @apply w-80;
+    }
+}
+
+@keyframes sizeClose {
+    100% {
+        @apply w-28;
+    }
+
+    50% {
+        @apply w-56;
+    }
+
+    0% {
+        @apply w-80;
+    }
+}

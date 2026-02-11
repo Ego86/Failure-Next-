@@ -36,8 +36,8 @@ const InputImg = ({
             {img.map((image, index) => (
               <ImageComponent
                 className={styles.image}
-                width={500}
-                height={500}
+                width={300}
+                height={300}
                 key={index}
                 src={image}
               />

@@ -8,6 +8,7 @@ import FriendsList from "@/features/friend-list/friend-list";
 import Main from "@/shared/ui/main";
 import MessagesList from "./ui/messagesList";
 import ChatForm from "./ui/chatForm";
+import useWindowSize from "@/shared/hook/useWindowSize";
 
 
 const human = [
@@ -21,7 +22,7 @@ const Message = () => {
   const [value, setValue] = useState<string>("");
   const { socket, messages } = useWebSocket();
   const chatRef = useRef<HTMLDivElement>(null);
-
+const [width] = useWindowSize()
   const handleSendMessage = useCallback(
     (event: React.FormEvent) => {
       event.preventDefault();
@@ -40,7 +41,7 @@ const Message = () => {
   
   return (
     <Main className="flex w-full h-full">
-      <FriendsList friends={human as []} />
+      {width > 1000 && <FriendsList friends={human as []} />}
       <PlatfomSection className="w-full flex flex-col justify-between overflow-hidden p-5 ">
         <MessagesList chatRef={chatRef} messages={messages}/>
         <ChatForm

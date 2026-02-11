@@ -22,3 +22,6 @@ pnpm-lock.yaml
 *.njsproj
 *.sln
 *.sw?
+
+*storybook.log
+storybook-static

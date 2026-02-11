@@ -1,5 +1,5 @@
 .main{
-    @apply flex w-screen h-full pr-5 py-5;
+    @apply flex w-screen h-full pr-5 py-5 overflow-x-hidden;
     @media (max-width: 1800px) {
         @apply flex-wrap;
     }
