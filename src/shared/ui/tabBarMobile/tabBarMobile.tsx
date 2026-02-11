@@ -5,7 +5,7 @@ import styles from "./tabBarMobile.module.scss";
 const TabBarMobile = ({className}) => {
   return (
     <nav className={`${styles.nav} ${className}`} >
-      <ul>
+      <ul className="bg-[#151515] p-2 rounded-xl">
         {listComponents.map(({ title, Icon, url }) => {
           return (
             <li key={title}>

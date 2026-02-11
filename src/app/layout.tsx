@@ -36,11 +36,11 @@ export default function RootLayout({
     <html className={notoSans.className} lang="ru" suppressHydrationWarning>
       <body className="wrapper">
         <Suspense fallback={<SkeletonPage />}>
-          <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+          {/* <AppRouterCacheProvider options={{ enableCssLayer: true }}> */}
             {/* <MiniSideBarAudio {...audio} /> */}
             {settings}
             <Layout isAuth={isAuth}>{children}</Layout>
-          </AppRouterCacheProvider>
+          {/* </AppRouterCacheProvider> */}
         </Suspense>
       </body>
     </html>

@@ -38,7 +38,7 @@ const Friends = () => {
       const changeDescription = description.slice(0, maxLengDescription);
       const isMaxLengDescription = description.length > maxLengDescription;
       return (
-        <LinkButton href={`profile/${username}`} variant="containd" key={id} className="mb-5">
+        <LinkButton href={`profile/${username}`} variant="containd" key={id} className="mb-5 max-w-full text-wrap break-words">
           <h3 className="font-bold text-base">{username}</h3>
           <p className="text-slate-400">
             {changeDescription}

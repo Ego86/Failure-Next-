@@ -1,7 +1,7 @@
 .link {
     transition: all .3s;
     box-shadow: 0px 2px 3px 1px #101010;
-    @apply bg-[#151515] overflow-hidden outline-none py-2 px-5 rounded-lg min-w-max;
+    @apply bg-[#151515] overflow-hidden outline-none py-2 px-5 rounded-lg;
 
     @media (prefers-color-scheme: light) {
         @apply bg-white;
